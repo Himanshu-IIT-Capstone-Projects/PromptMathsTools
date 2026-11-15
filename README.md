@@ -2,6 +2,16 @@
 
 PromptMathsTools is a prompt-engineering capstone for solving math questions through a FastAPI service. It first classifies each problem (simple arithmetic, quadratic equation, or word problem), then supplies that classification and the original question to a LangChain agent equipped with arithmetic and algebra tools. The agent uses role instructions, chain-of-thought task guidance, and few-shot examples to select and call tools as needed.
 
+# Project API's used:
+<div>
+  <img src="./images/swagger.png" style="width:80%;" />
+</div>
+
+# Project Video Animation: 
+<div>
+  <img src="./images/c1-vid.gif" style="width:80%;" />
+</div>
+
 ## Architecture
 
 ```text
