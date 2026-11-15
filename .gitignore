@@ -214,7 +214,18 @@ tempCodeRunnerFile.py
 # Marimo
 marimo/_static/
 marimo/_lsp/
+
+
+# others
+.vs
+.mp4
+.env
+.venv
+.venv/
+.vscode
 __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+

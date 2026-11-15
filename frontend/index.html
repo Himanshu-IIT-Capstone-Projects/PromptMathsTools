@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Olympiad AI — Multi-Tool Solver</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- Google Fonts for Academic / Olympiad Typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Olympiad Header -->
+        <header class="olympiad-header">
+            <div class="badge">∑ LANGCHAIN MULTI-TOOL ENGINE</div>
+            <h1>Agentic Tools for Math-Operations </h1>
+            <p class="subtitle">
+                [Powered by Structured Output Routing, Few-Shot Chain-of-Thought &amp; Live Python Symbolic Tools]
+            </p>
+        </header>
+
+        <!-- Quick Preset Problem Chips -->
+        <section class="presets">
+            <span class="preset-label">Sample Problems:</span>
+            <button type="button" class="chip" data-q="What is 3 + 2?">
+                I. Basic Arithmetic (3 + 2)
+            </button>
+            <button type="button" class="chip" data-q="Find x for (x + 2)*(x - 3) = 0">
+                II. Quadratic (x+2)(x-3) = 0
+            </button>
+            <button type="button" class="chip" data-q="Find x for (x^2 + x - 12) = 0">
+                II. Quadratic (x^2 + x - 12) = 0
+            </button>
+            <button type="button" class="chip"
+                data-q="I have 100 rupees. I bought 500gm apples. 10kg apples cost was 1000 rupees, so how much am I left with?">
+                III. Olympiad Word Problem (Apples)
+            </button>
+        </section>
+
+        <!-- Problem Input Form -->
+        <main>
+            <form id="solve-form" class="problem-card">
+                <label for="question-input">Problem Statement</label>
+                <textarea id="question-input" rows="3"
+                    placeholder="Enter an arithmetic expression, quadratic equation, or multi-step word problem..."
+                    required></textarea>
+                <div class="form-footer">
+                    <span class="hint">Press <strong>Solve Problem</strong> to watch live tool execution</span>
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-icon">▶</span> Solve Problem
+                    </button>
+                </div>
+            </form>
+
+            <!-- 1. Official Solution Card (Now at the TOP right below Problem Statement!) -->
+            <section id="answer-section" class="answer-card hidden">
+                <div class="answer-header">
+                    <span>🏆 Official Solution</span>
+                    <span id="category-tag" class="category-tag"></span>
+                </div>
+                <div id="answer-content" class="answer-content"></div>
+            </section>
+
+            <!-- 2. Verbose Live Agent & Tool Execution Pipeline -->
+            <section id="pipeline-section" class="pipeline-card hidden">
+                <div class="pipeline-header">
+                    <h2>⚡ Verbose Agent &amp; Tool Execution Log</h2>
+                    <span id="status-pill" class="status-pill running">Processing...</span>
+                </div>
+                <div id="steps-list" class="steps-list"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
